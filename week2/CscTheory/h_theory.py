@@ -77,6 +77,8 @@ def main():
     cross = [x*10**-18 for x in crosss]
     w = width(wlength)
     plt.plot(en[:-1], cross[:-1],'.') # plot graph for data
+
+    plt.savefig('h')
     plt.show()
 
     var(10**-17, 0.75,en) # variance
