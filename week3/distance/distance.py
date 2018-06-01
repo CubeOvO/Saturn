@@ -7,10 +7,10 @@ Created on Fri May 25 16:30:49 2018
 import pandas as pd
 import numpy as sp
 #%%
-#distance of Enceladus
+# distance of Enceladus
 d = 2.38*10**8
 
-#rotation period of Saturn, in sec
+# rotation period of Saturn, in sec
 T = 10*60*60 + 32*60 + 35
 
 # angular velocity
@@ -26,21 +26,30 @@ dt = pd.read_csv('summary.csv')
 chem = list(dt['chemical'])
 k_rate = list(dt['k_rate'])
 
-lenglist = []
-for i in range(len(k_rate)):
-    l = length(1/(k_rate[i]))
-    lenglist.append(l)
-    
-for i in range(len(k_rate)):
-    print(str(chem[i])+' will go '+str(lenglist[i])+' meters.')
+#lenglist = []
+#for i in range(len(k_rate)):
+#    l = length(1/(k_rate[i]))
+#    lenglist.append(l)
+#    
+#for i in range(len(k_rate)):
+#    print(str(chem[i])+' will go '+str(lenglist[i])+' meters.')
 #%%
-
-# kilometer version
-lenglistkm = []
+# length
+lenglist = []
 
 for i in range(len(k_rate)):
     l = length(1/(k_rate[i]))/1000
-    lenglistkm.append(l)
+    lenglist.append(l)
     
 for i in range(len(k_rate)):
-    print(str(chem[i])+' will go '+str(lenglistkm[i])+' kilometers.')
+    print(str(chem[i])+' will go '+str(lenglist[i])+' km')
+
+# degree
+lenglistde = []
+
+for i in range(len(k_rate)):
+    l = length(1/(k_rate[i]))/1000
+    lenglistde.append(l)
+    
+for i in range(len(k_rate)):
+    print(str(chem[i])+' will go '+str(lenglistde[i]*1000*180/d/sp.pi)+' degrees')
