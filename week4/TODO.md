@@ -1,4 +1,4 @@
 # TODO
-update ppt
+~~update ppt~~
 
 calculate production rate of -ve ions at Saturn
