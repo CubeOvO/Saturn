@@ -4,7 +4,7 @@ import numpy as np
 
 df = pd.read_csv('O-.csv')
 print(df)
-T = 3864.7
+T = 15459
 me = 9.11*10**-31
 pi = np.pi
 kb = 1.38*10**-23
@@ -30,7 +30,9 @@ def maxwell(v):
     return a(T)**3*4*pi*v**2*np.exp(-alpha(T)*v**2)
 
 
-velocity = np.linspace(1,1.5*10**6,10000)
+velocity = np.linspace(1,2*10**6,10000) # change this only
+
+
 energy = [vel2en(x)/(1.6*10**-19) for x in velocity]
 Probability = [maxwell(x) for x in velocity]
 plt.plot(energy, Probability)
