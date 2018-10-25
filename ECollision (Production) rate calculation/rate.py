@@ -1,6 +1,6 @@
 from maxwell import *
 
-chemical = ['O2O-','O-','OH-']
+chemical = ['Cl2-','O-','OH-']
 
 
 def main():

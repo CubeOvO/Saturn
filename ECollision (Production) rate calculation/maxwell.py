@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-T = 15459 # 2eV
+T = 15459*100 # 2eV
 me = 9.11*10**-31
 pi = np.pi
 kb = 1.38*10**-23
